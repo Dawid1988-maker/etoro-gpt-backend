@@ -6,20 +6,23 @@ export default async function handler(req, res) {
       const chatId = message.chat.id;
       const userText = message.text;
 
-      const responseText = `Cześć, tu Sara GPT 🤖\nNapisałeś: ${userText}\nNapisz np. KRYPTO lub SPR TAKE, a zrobię analizę!`;
+      const replyText = `Cześć! Otrzymałem Twoją wiadomość: "${userText}"`;
 
-      await fetch(`https://api.telegram.org/bot${process.env.BOT_TOKEN}/sendMessage`, {
+      const token = '8273022564:AAE2W0s6X_eXJbH6gp0t00hNZyvIG5NsZqc';
+      const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+      await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           chat_id: chatId,
-          text: responseText,
+          text: replyText,
         }),
       });
     }
 
     res.status(200).send('OK');
   } else {
-    res.status(405).send('Method Not Allowed');
+    res.status(405).send('Metoda niedozwolona');
   }
 }
