@@ -8,7 +8,7 @@ export default async function handler(req, res) {
 
       const replyText = `Cześć! Otrzymałem Twoją wiadomość: "${userText}"`;
 
-      const token = '8273022564:AAFie0YzyoBv2K2QL2eE-WVbZ1cclJeLoM';
+      const token = '8078572766:AAFz-eur_v2VcHZHxAaKKF6tghX6qaUo_10';
       const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
       await fetch(url, {
