@@ -1,1 +1,0 @@
-// folder analiza utworzony
