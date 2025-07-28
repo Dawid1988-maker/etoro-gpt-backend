@@ -12,9 +12,9 @@ export default async function handler(req, res) {
   const chatId = message.chat.id;
   const userMessage = message.text;
 
-  const replyMessage = `Otrzymałem Twoją wiadomość: "${userMessage}" 👋`;
+  const replyMessage = `Otrzymałem Twoją wiadomość`;
 
-  const TELEGRAM_TOKEN = process.env.TELEGRAM_TOKEN;
+  const TELEGRAM_TOKEN = 8254927814:AAHr08-Rs2xTTWbmY57V3mpnAodcWqs2tCw
   const TELEGRAM_API = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`;
 
   const response = await fetch(TELEGRAM_API, {
