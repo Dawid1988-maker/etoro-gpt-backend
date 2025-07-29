@@ -11,8 +11,7 @@ export default async function handler(req, res) {
 
     const response = await sheets.spreadsheets.values.get({
       spreadsheetId: process.env.ID_ARKUSZY_KALKULACYJNEJ,
-      range: 'Arkusz1', // Jeśli Twój arkusz ma inną nazwę, zmień tu
-    });
+      range: 'portfel_etero_sara', 
 
     const rows = response.data.values;
     res.status(200).json({ status: 'ok', data: rows });
