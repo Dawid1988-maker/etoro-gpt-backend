@@ -1,7 +1,7 @@
-
 {
   "name": "etoro-gpt-backend",
   "version": "1.0.0",
+  "type": "module",
   "main": "analyze.js",
   "scripts": {
     "start": "node analyze.js"
