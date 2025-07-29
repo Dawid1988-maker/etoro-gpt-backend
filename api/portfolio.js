@@ -3,7 +3,7 @@ import { google } from 'googleapis';
 export default async function handler(req, res) {
   try {
     const auth = new google.auth.GoogleAuth({
-      credentials: JSON.parse(process.env.KLUCZ_USŁUGI_GOOGLE),
+      credentials: JSON.parse(process.env.GOOGLE_SERVICE_KEY),
       scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'],
     });
 
