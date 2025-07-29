@@ -17,6 +17,10 @@ export default async function handler(req, res) {
     res.status(200).json({ status: 'ok', data: rows });
   } catch (error) {
     console.error('Błąd backendu:', error); // dodajemy log
-    res.status(500).json({ status: 'error', message: error.message });
+    res.status(500).json({ status: 'error',
+    message: error.message,
+    stack: error.stack,
+  });
+}
   }
 }
