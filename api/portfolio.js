@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     const sheets = google.sheets({ version: 'v4', auth });
 
     const response = await sheets.spreadsheets.values.get({
-      spreadsheetId: process.env.SPREADSHEET_ID,
+      spreadsheetId: process.env.ID_ARKUSZY_KALKULACYJNEJ,
       range: 'portfel_etero_sara', 
 
     const rows = response.data.values;
