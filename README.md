@@ -1,2 +1,3 @@
 # etoro-gpt-backend
-Backend do analizy eToro przez SARA GPT
+
+Wdrożenie Agenta Sary do obsługi portfela eToro.

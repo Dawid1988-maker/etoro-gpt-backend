@@ -1,3 +1,8 @@
-export default function handler(req, res) {
-  res.status(200).json({ message: 'eToro GPT backend działa!' });
-}
+
+// Tu będzie logika analizy arkusza Google Sheets (TP/SL, % zysków itd.)
+module.exports = function analyze(data) {
+  return {
+    summary: "Analiza nie została jeszcze zaimplementowana",
+    insights: [],
+  };
+};
