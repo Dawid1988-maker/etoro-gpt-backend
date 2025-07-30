@@ -1,23 +1,14 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "api/etoro.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "api/telegram/index.js",
-      "use": "@vercel/node"
-    }
+    { "src": "api/etoro.js", "use": "@vercel/node" },
+    { "src": "api/telegram/index.js", "use": "@vercel/node" }
   ],
   "routes": [
-    {
-      "src": "/api/etoro",
-      "dest": "api/etoro.js"
-    },
-    {
-      "src": "/api/telegram",
-      "dest": "api/telegram/index.js"
-    }
+    { "src": "/api/etoro", "dest": "api/etoro.js" },
+    { "src": "/api/telegram", "dest": "api/telegram/index.js" }
   ]
 }
+
+
+
