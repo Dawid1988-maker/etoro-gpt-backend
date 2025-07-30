@@ -4,5 +4,9 @@
   "main": "analyze.js",
   "scripts": {
     "start": "node analyze.js"
+  },
+  "dependencies": {
+    "googleapis": "^105.0.0",
+    "dotenv": "^16.0.3"
   }
 }
