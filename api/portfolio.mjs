@@ -1,4 +1,4 @@
-import { google } from 'googleapis';
+import { google } from 'googleapis'
 
 export default async function handler(req, res) {
   try {
@@ -8,19 +8,20 @@ export default async function handler(req, res) {
     });
 
     const sheets = google.sheets({ version: 'v4', auth });
+    const spreadsheetId = process.env.ID_ARKUSZY_KALKULACYJNE;
 
     const response = await sheets.spreadsheets.values.get({
-      spreadsheetId: process.env.ID_ARKUSZY_KALKULACYJNEJ,
-      range: 'portfel_etero_sara', 
+      spreadsheetId,
+      range: 'portfel_etoro_sara!A1:F100',
+    });
 
     const rows = response.data.values;
-    res.status(200).json({ status: 'ok', data: rows });
+    res.status(200).json({ data: rows });
   } catch (error) {
-    console.error('Błąd backendu:', error); // dodajemy log
-    res.status(500).json({ status: 'error',
-    message: error.message,
-    stack: error.stack,
-  });
-}
+    console.error('Błąd przy pobieraniu danych:', error);
+    res.status(500).json({ error: 'Coś poszło nie tak 🙁' });
   }
 }
+
+
+
