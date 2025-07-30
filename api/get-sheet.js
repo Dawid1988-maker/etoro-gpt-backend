@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     const sheets = google.sheets({ version: 'v4', auth });
 
     const response = await sheets.spreadsheets.values.get({
-      spreadsheetId: process.env.ID_ARKUSZA_KALKULACYJNEJ,
+      spreadsheetId: process.env.SPREADSHEET_ID,
       range: 'Arkusz1!A1:Z1000', // <-- Zakres danych z arkusza
     });
 
