@@ -1,3 +1,5 @@
 export default function handler(req, res) {
-  res.status(200).json({ message: 'działa etoro2 ✅' });
+  // redeploy Vercel test
+  res.status(200).json({ message: 'działa etoro2' });
 }
+
