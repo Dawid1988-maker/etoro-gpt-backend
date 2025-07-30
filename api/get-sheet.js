@@ -1,10 +1,9 @@
 import { google } from 'googleapis';
-import { NextResponse } from 'next/server';
 import dotenv from 'dotenv';
 
 dotenv.config();
 
-export async function GET() {
+export default async function handler(req, res) {
   try {
     const auth = new google.auth.GoogleAuth({
       credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY),
@@ -18,8 +17,13 @@ export async function GET() {
       range: 'Arkusz1!A1:Z1000',
     });
 
-    return NextResponse.json({ data: response.data.values });
+    res.status(200).json({ data: response.data.values });
   } catch (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error('Błąd pobierania danych z arkusza:', error);
+    res.status(500).json({ error: 'Wystąpił błąd podczas pobierania danych.' });
   }
 }
+Napisz do: Samochody Osobowe
+
+
+
