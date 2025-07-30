@@ -1,12 +1,15 @@
 {
+  "type": "module",
   "name": "etoro-gpt-backend",
   "version": "1.0.0",
-  "main": "analyze.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node analyze.js"
+    "dev": "node api/get-sheet.js"
   },
   "dependencies": {
-    "googleapis": "^105.0.0",
-    "dotenv": "^16.0.3"
+    "googleapis": "^118.0.0",
+    "dotenv": "^16.4.5"
   }
 }
+
+
